@@ -61,7 +61,6 @@ Node* delRec(Node* studentList, int id){
 	else{
 		Node* firstStudent = studentList;
 		firstStudent->setNext(delRec(studentList->getNext(), id));
-		cout << "Student deleted." << endl;
 		return firstStudent;
 	}
 };
