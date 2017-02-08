@@ -102,13 +102,13 @@ int main(){
 			cin >> id;
 			cout << "Enter GPA" << endl;
 			cin >> gpa;
-			add(studentList, first, last, id, gpa);
+			studentList = add(studentList, first, last, id, gpa);
 			cout << "Student added." << endl;
 		}
 		if(input[1] == 'E'){
 			cout << "Enter ID" << endl;
 			cin >> id;
-			delRec(studentList, id);
+			studentList = delRec(studentList, id);
 		}
 		else if(input[1] == 'R'){
 			printRec(studentList);
