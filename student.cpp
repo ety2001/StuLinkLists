@@ -4,9 +4,11 @@
 #include "student.h"
 #include "string.h"
 
-Student::Student(char* name, int year){
-	strcpy(fullName,name);
-	gradYear = year;
+Student::Student(char* fisrt, char* last, int id, float gpa){
+	strcpy(this->first,first);
+	strcpy(this->last,last);
+	this->id = id;
+	this->gpa = gpa;
 };
 
 char* Student::getFirst(){
