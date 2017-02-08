@@ -55,11 +55,13 @@ Node* delRec(Node* studentList, int id){
 		studentList = studentList->getNext();
 		firstStudent->setNext(NULL);
 		delete firstStudent;
+		cout << "Student deleted." << endl;
 		return studentList;
 	}
 	else{
 		Node* firstStudent = studentList;
 		firstStudent->setNext(delRec(studentList->getNext(), id));
+		cout << "Student deleted." << endl;
 		return firstStudent;
 	}
 };
@@ -107,7 +109,6 @@ int main(){
 			cout << "Enter ID" << endl;
 			cin >> id;
 			delRec(studentList, id);
-			cout << "Student deleted." << endl;
 		}
 		else if(input[1] == 'R'){
 			printRec(studentList);
